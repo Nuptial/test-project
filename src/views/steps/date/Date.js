@@ -42,10 +42,7 @@ const Date = (props) => {
         <span className="w-50 font-weight-bold">Check-in Tarihi:</span>
         <Datetime
           value={startDate}
-          onChange={(date) => {
-            setEndDate(null);
-            setStartDate(date);
-          }}
+          onChange={(date) => setStartDate(date)}
           isValidDate={validCheckIn}
           dateFormat="DD/MM/YYYY"
           timeFormat="h:mm"
