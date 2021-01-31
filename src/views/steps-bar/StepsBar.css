@@ -1,0 +1,17 @@
+.steps-bar {
+  margin-bottom: 50px;
+}
+
+.steps-bar span {
+  font-weight: bold;
+  text-align: left;
+  border: 1px solid black;
+  font-size: 12px;
+  width: 100px;
+  padding: 10px 0;
+  padding-left: 10px;
+}
+
+.steps-bar span.active {
+  border: 1px solid #FFC0CB;
+}

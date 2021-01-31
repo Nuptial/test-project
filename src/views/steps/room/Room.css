@@ -1,0 +1,15 @@
+.radio-wrapper label {
+  width: 100px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.radio-wrapper > div {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .radio-wrapper {
+    flex-direction: column;
+  }
+}

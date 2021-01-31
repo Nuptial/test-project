@@ -1,0 +1,52 @@
+.payment-container .margin-top50 {
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+.payment-container .credit {
+  margin-top: 100px;
+  height: 250px;
+  width: 400px;
+  border: 0;
+  border-radius: 10px;
+  background: url('../../../images/world-map-background.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+}
+
+.payment-container .credit__bank {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.payment-container .credit__mc {
+  width: 80px;
+  float: right;
+}
+
+.payment-container .credit__card-number {
+  height: 91px;
+  padding-top: 40px;
+  font-weight: 600;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+.payment-container .credit__ccv {
+  height: 24px;
+  float: right;
+  margin-top: -10px;
+  text-transform: uppercase;
+}
+
+.payment-container .credit__name,
+.payment-container .credit__date {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  height: 25px;
+}
+
+.payment-container .credit label {
+  color: #fff;
+}
