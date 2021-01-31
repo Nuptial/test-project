@@ -12,11 +12,11 @@ const Room = (props) => {
   const startDate =
     moment(
       JSON.parse(localStorage.getItem("reservation-info") || "{}").startDate
-    ).format("DD/MM/YYYY h:mm") || "";
+    ).format("MM/DD/YYYY h:mm") || "";
   const endDate =
     moment(
       JSON.parse(localStorage.getItem("reservation-info") || "{}").endDate
-    ).format("DD/MM/YYYY h:mm") || "";
+    ).format("MM/DD/YYYY h:mm") || "";
 
   const moveNext = () => {
     if(!roomType || !view) {

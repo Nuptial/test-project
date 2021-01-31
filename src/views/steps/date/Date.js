@@ -9,12 +9,12 @@ const Date = (props) => {
   const [startDate, setStartDate] = useState(
     reservationInfo
       .startDate ? moment(reservationInfo.startDate)
-      .format("DD/MM/YYYY h:mm") : null
+      .format("MM/DD/YYYY h:mm") : null
   );
   const [endDate, setEndDate] = useState(
     reservationInfo
       .endDate ? moment(reservationInfo.endDate)
-      .format("DD/MM/YYYY h:mm") : null
+      .format("MM/DD/YYYY h:mm") : null
   );
   const yesterday = moment().subtract(1, "day");
   const validCheckIn = (current) => {
@@ -42,9 +42,11 @@ const Date = (props) => {
         <span className="w-50 font-weight-bold">Check-in Tarihi:</span>
         <Datetime
           value={startDate}
-          onChange={(date) => setStartDate(date)}
+          onChange={(date) =>
+            setStartDate(date)
+          }
           isValidDate={validCheckIn}
-          dateFormat="DD/MM/YYYY"
+          dateFormat="MM/DD/YYYY"
           timeFormat="h:mm"
           key={"start-date"}
         />
@@ -53,9 +55,11 @@ const Date = (props) => {
         <span className="w-50 font-weight-bold">Check-out Tarihi:</span>
         <Datetime
           value={endDate}
-          onChange={(date) => setEndDate(date)}
+          onChange={(date) =>
+            setEndDate(date)
+          }
           isValidDate={validCheckOut}
-          dateFormat="DD/MM/YYYY"
+          dateFormat="MM/DD/YYYY"
           timeFormat="h:mm"
           key={"end-date"}
         />

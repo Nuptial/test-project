@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import moment from "moment";
 import "./Payment.css";
 
 const Payment = (props) => {
@@ -13,6 +14,14 @@ const Payment = (props) => {
     day: reservationInfo.cardInfo ? reservationInfo.cardInfo.day : 'xx',
     ccv: reservationInfo.cardInfo ? reservationInfo.cardInfo.ccv : 'CCV'
   });
+  const startDate =
+    moment(
+      JSON.parse(localStorage.getItem("reservation-info") || "{}").startDate
+    ).format("MM/DD/YYYY h:mm") || "";
+  const endDate =
+    moment(
+      JSON.parse(localStorage.getItem("reservation-info") || "{}").endDate
+    ).format("MM/DD/YYYY h:mm") || "";
 
   const onChange = (e,field) => {
     cardInfo[field] = e.target.value;
@@ -39,13 +48,13 @@ const Payment = (props) => {
       <div className="pl-3">
         <span>
           <span className="font-weight-bold mr-2">Check-in:</span>
-          {reservationInfo.startDate}
+          {startDate}
         </span>
       </div>
       <div className="pl-3">
         <span>
           <span className="font-weight-bold mr-2">Check-out:</span>
-          {reservationInfo.endDate}
+          {endDate}
         </span>
       </div>
       <div className="pl-3">
